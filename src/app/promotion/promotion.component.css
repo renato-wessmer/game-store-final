@@ -1,0 +1,32 @@
+#section-vendidos {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#section-vendidos h1 {
+    font-weight: bold;
+    padding: 20px;
+    font-size: 50px;
+}
+
+#section-vendidos h2 {
+    font-weight: bold;
+    padding: 20px;
+}
+
+#section-vendidos img{
+    height: 300px;
+    border-radius: 10px;
+}
+
+#section-vendidos .card{
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#section-vendidos .preco {
+    color:red;
+    font-size: 18px;
+    font-weight: bold;
+}
