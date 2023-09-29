@@ -24,6 +24,11 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ConsoleComponent } from './console/console.component';
 import { GamesComponent } from './games/games.component';
 import { PromotionComponent } from './promotion/promotion.component';
+import { RestrictComponent } from './restrict/restrict.component';
+import { UpdateProductComponent } from './restrict/update-product/update-product.component';
+import { ProductRegistrationComponent } from './restrict/product-registration/product-registration.component';
+import { ProductListComponent } from './restrict/product-list/product-list.component';
+import { RestrictMenuComponent } from './restrict/restrict-menu/restrict-menu.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,12 @@ import { PromotionComponent } from './promotion/promotion.component';
     ToolbarComponent,
     ConsoleComponent,
     GamesComponent,
-    PromotionComponent
+    PromotionComponent,
+    RestrictComponent,
+    UpdateProductComponent,
+    ProductRegistrationComponent,
+    ProductListComponent,
+    RestrictMenuComponent
   ],
   imports: [
     BrowserModule,
