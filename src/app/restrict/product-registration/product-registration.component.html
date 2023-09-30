@@ -3,28 +3,28 @@
     <section id="section-cadastro">
         <form>
 
-            <label for="produto">Nome do Produto</label>
-            <input type="text" class="form-control" name="produto" [(ngModel)]="produto.produto">
+            <label for="product">Nome do Produto</label>
+            <input type="text" class="form-control" name="product" [(ngModel)]="product.product">
 
             <br>
 
-            <label for="descricao">Descrição</label>
-            <input type="text" class="form-control" name="descricao" [(ngModel)]="produto.descricao">
+            <label for="description">Descrição</label>
+            <input type="text" class="form-control" name="description" [(ngModel)]="product.description">
 
             <br>
 
-            <label for="foto">Foto</label>
-            <input type="text" class="form-control" name="foto" [(ngModel)]="produto.foto">
+            <label for="picture">Foto</label>
+            <input type="text" class="form-control" name="picture" [(ngModel)]="product.picture">
 
             <br>
 
-            <label for="preco">Preço</label>
-            <input type="number" class="form-control" name="preco" [(ngModel)]="produto.preco">
+            <label for="price">Preço</label>
+            <input type="number" class="form-control" name="price" [(ngModel)]="product.price">
 
             <br>
 
 
-            <button type="button" class="btn btn-primary mb-3" (click)="cadastrar()">Cadastrar</button>
+            <button type="button" class="btn btn-primary mb-3" (click)="registration()">Cadastrar</button>
 
         </form>
     </section>

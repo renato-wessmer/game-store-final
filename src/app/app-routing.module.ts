@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { ConsoleComponent } from './console/console.component';
 import { GamesComponent } from './games/games.component';
 import { PromotionComponent } from './promotion/promotion.component';
+import { RestrictComponent } from './restrict/restrict.component';
 
 const routes: Routes = [
   {path: 'console', component:ConsoleComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'index', component: IndexComponent},
   {path: 'login', component: LoginComponent},
   {path: 'promotion', component: PromotionComponent},
+  {path: 'restrict', component: RestrictComponent},
   {path: '', redirectTo: '/index', pathMatch:'full'}
 ];
 

@@ -1,48 +1,45 @@
+import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Produto } from 'src/app/models/Produto.model';
-import { ProdutoService } from 'src/app/produto.service';
+import { Product } from 'src/app/models/Product.model';
+import { ProductService } from 'src/app/product.service';
 
 @Component({
-  selector: 'app-atualiza-produto',
-  templateUrl: './atualiza-produto.component.html',
-  styleUrls: ['./atualiza-produto.component.css']
+  selector: 'app-update-product',
+  templateUrl: './update-product.component.html',
+  styleUrls: ['./update-product.component.css']
 })
-export class AtualizaProdutoComponent implements OnInit{
+export class UpdateProductComponent implements OnInit {
 
-  public produtoId: number = 0;
-  public produto: Product = new Product(0,"","","",0);
+  public productId: number = 0;
+  public product: Product = new Product(0, "", "", "", 0);
 
-  constructor(private _produtoService:ProdutoService, private _router: Router,
-    private _activatedRoute:ActivatedRoute){
-      this._activatedRoute.params.subscribe(params => this.produtoId = params['id']);
-    }
+  constructor(private _productService: ProductService, private _router: Router, private _activatedRoute: ActivatedRoute) {
+    this._activatedRoute.params.subscribe(params => this.productId = params['id']);
+  }
+  ngOnInit(): void {
+    this.productList();
+  }
 
-    ngOnInit(): void {
-      this.listarProduto();
-    }
+  productList(): void {
+    this._productService.getProduct(this.productId).subscribe(
+      (res: any) => {
+        this.product = new Product(
+          res[0].id,
+          res[0].product,
+          res[0].description,
+          res[0].picture,
+          res[0].price
+        );
+      }
+    )
+  }
 
-    listarProduto():void{
-      this._produtoService.getProduto(this.produtoId).subscribe(
-        (res: any) => {
-          this.produto = new Produto(
-            res[0].id,
-            res[0].produto,
-            res[0].descricao,
-            res[0].foto,
-            res[0].preco
-          );
-        }
-      )
-    }
-
-    atualizar(id: number){
-      this._produtoService.atualizarProduto(id,this.produto).subscribe(
-        produto => {this.produto = new Produto(0,"","","",0)},
-        err => {alert("Erro ao atualizar")}
-      );
-
-      this._router.navigate(["restrito/lista"]);
-    }
-  
+  updateProduct(id: number) {
+    this._productService.updateProduct(id, this.product).subscribe(
+      product => { this.product = new Product(0, "", "", "", 0) },
+      error => { alert("Erro ao atualizar produto"); }
+    );
+    this._router.navigate([/restrict/list]);
+  }
 }

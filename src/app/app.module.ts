@@ -1,20 +1,22 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
 /*Angular Material Importation*/
 
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 /*Angular Material Importation*/
 
 import { AppRoutingModule } from './app-routing.module';
+import { RestrictRoutingModule } from './restrict/restrict-routing.moudule';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IndexComponent } from './index/index.component';
@@ -30,36 +32,42 @@ import { ProductRegistrationComponent } from './restrict/product-registration/pr
 import { ProductListComponent } from './restrict/product-list/product-list.component';
 import { RestrictMenuComponent } from './restrict/restrict-menu/restrict-menu.component';
 
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    IndexComponent,
-    LoginComponent,
-    FooterComponent,
-    ToolbarComponent,
-    ConsoleComponent,
-    GamesComponent,
-    PromotionComponent,
-    RestrictComponent,
-    UpdateProductComponent,
-    ProductRegistrationComponent,
-    ProductListComponent,
-    RestrictMenuComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatMenuModule,
-    MatToolbarModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        IndexComponent,
+        LoginComponent,
+        FooterComponent,
+        ToolbarComponent,
+        ConsoleComponent,
+        GamesComponent,
+        PromotionComponent,
+        RestrictComponent,
+        UpdateProductComponent,
+        ProductRegistrationComponent,
+        ProductListComponent,
+        RestrictMenuComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatMenuModule,
+        MatToolbarModule,
+        RestrictRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
