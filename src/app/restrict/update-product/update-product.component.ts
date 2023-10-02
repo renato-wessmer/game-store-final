@@ -1,4 +1,3 @@
-import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/Product.model';
@@ -40,6 +39,7 @@ export class UpdateProductComponent implements OnInit {
       product => { this.product = new Product(0, "", "", "", 0) },
       error => { alert("Erro ao atualizar produto"); }
     );
-    this._router.navigate([/restrict/list]);
+    
+    this._router.navigate(['restrict/list']);
   }
 }
