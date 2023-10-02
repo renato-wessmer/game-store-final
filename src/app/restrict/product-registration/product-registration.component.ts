@@ -24,7 +24,7 @@ export class ProductRegistrationComponent {
       }
     );
 
-    this._router.navigate(['restrict/list']);
+    this._router.navigate(['restrict/registration']);
   }
 
 } 
