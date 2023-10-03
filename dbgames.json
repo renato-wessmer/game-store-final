@@ -1,13 +1,6 @@
 {
   "produtcs": [
     {
-      "id": 1,
-      "product": "Jogo 1",
-      "description": "Descrição do jogo 1",
-      "picture": "jogo1.png",
-      "price": 190
-    },
-    {
       "id": 2,
       "product": "Jogo 2",
       "description": "Descrição do jogo 2",
@@ -20,6 +13,20 @@
       "description": "Descrição do jogo 3",
       "picture": "jogo3.png",
       "price": 150
+    },
+    {
+      "id": 4,
+      "product": "Jogo 4",
+      "description": "descrição do jogo 4",
+      "picture": "jogo1.png",
+      "price": 1
+    },
+    {
+      "id": 5,
+      "product": "jogo 6",
+      "description": "descrição do jogo 6",
+      "picture": "jogo1.png",
+      "price": 3
     }
   ]
 }

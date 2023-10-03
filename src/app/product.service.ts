@@ -26,12 +26,12 @@ export class ProductService {
     }
 
     updateProduct(id: any, product: Product): Observable<Product[]> {
-        const urlUpdate = `${this.url}?$id=${id}`;
+        const urlUpdate = `${this.url}/${id}`;
         return this._httpCliente.put<Product[]>(urlUpdate, product);
     }
 
     removeProduct(id: any): Observable<Product[]> {
-        const urlRemove = `${this.url}?$id=${id}`;
+        const urlRemove = `${this.url}/${id}`;
         return this._httpCliente.delete<Product[]>(urlRemove);
     }
 }

@@ -11,7 +11,7 @@ const restrictRoutes: Routes = [
         path: 'restrict', component: RestrictComponent, children: [
             { path: 'registration', component: ProductRegistrationComponent, canActivate: [GuardGuard] },
             { path: 'list', component: ProductListComponent, canActivate: [GuardGuard] },
-            { path: 'update/ :id', component: UpdateProductComponent, canActivate: [GuardGuard] }      
+            { path: 'update/:id', component: UpdateProductComponent, canActivate: [GuardGuard] }      
     ]},
 
     { path: '', redirectTo: '/restrict/list', pathMatch: 'full' }
